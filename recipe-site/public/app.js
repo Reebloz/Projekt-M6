@@ -75,4 +75,3 @@ function escapeHtml(text) {
         .replaceAll("'", "&#039;");
 }
 
-loadRecipes();
