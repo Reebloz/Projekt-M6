@@ -13,16 +13,17 @@ A basic full-stack recipe website starter with:
 - `howToMake`
 
 ## Run
-1. Open a terminal in this folder.
-2. Install dependencies:
+1. Install node.js
+2. Open a terminal in this folder.
+3. Install dependencies:
    ```bash
    npm install
    ```
-3. Start server:
+4. Start server:
    ```bash
    npm start
    ```
-4. Open `http://localhost:3000`
+5. Open `http://localhost:3000`
 
 ## API
 - `GET /api/recipes` - list all recipes
