@@ -1,7 +1,7 @@
 
 1. Install node.js
 2. Open a terminal in this folder.
-   Law:cd C:\Users\thaut\OneDrive\Dokumenter\Projekt\recipe-site
+   Law:cd C:\Users\thaut\OneDrive - Aalborg Universitet\Kandidat\2 semester ITL\modul 6\Ny mappe\Projekt\recipe-site
 3. Install dependencies:
    ```bash
    npm install
