@@ -40,6 +40,8 @@ body {
 }
 
 .brand {
+    text-decoration: none;
+    color: inherit;
     font-family: "Playfair Display", serif;
     font-size: 1.6rem;
     font-weight: 700;
@@ -97,6 +99,10 @@ button {
     gap: 1rem;
 }
 
+.container.single-column {
+    grid-template-columns: 1fr;
+}
+
 .card {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -139,15 +145,31 @@ button[type="submit"] {
     gap: 0.5rem;
 }
 
+.section-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
 .secondary-btn {
+    display: inline-block;
+    text-decoration: none;
     background: #f4e2d6;
     color: var(--accent-dark);
     padding: 0.5rem 0.9rem;
 }
 
+.action-link {
+    line-height: 1.25;
+}
+
 .recipes-list {
     display: grid;
     gap: 0.7rem;
+}
+
+.recipes-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .recipe-item {
@@ -166,6 +188,23 @@ button[type="submit"] {
     color: var(--muted);
     font-size: 0.95rem;
     margin: 0.3rem 0;
+}
+
+.recipe-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+.recipe-action-btn {
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.88rem;
+}
+
+.danger-btn {
+    background: #fbe2dd;
+    color: #8a2e1d;
 }
 
 .message {
@@ -194,5 +233,20 @@ button[type="submit"] {
 
     .hero {
         min-height: 40vh;
+    }
+
+    .recipes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

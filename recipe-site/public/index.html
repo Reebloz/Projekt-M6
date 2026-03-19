@@ -16,53 +16,32 @@
 <body>
     <header class="hero">
         <nav class="top-nav">
-            <div class="brand">Fresh Table</div>
-            <a href="#add-recipe" class="nav-btn">Add Recipe</a>
+            <a class="brand" href="/">Fresh Table</a>
+            <a href="manage.html" class="nav-btn">Add Recipe</a>
         </nav>
         <div class="hero-content">
             <p class="eyebrow">HOME COOKING COLLECTION</p>
             <h1>Turn Everyday Ingredients Into Great Meals</h1>
             <p>
-                Save your best recipes in one place. Keep track of ingredients,
-                descriptions, and simple step-by-step instructions.
+                Explore the full Fresh Table collection and discover new ideas for
+                breakfast, lunch, dinner, and sweet treats.
             </p>
         </div>
     </header>
 
-    <main class="container">
-        <section id="add-recipe" class="card form-card">
-            <h2>Add a New Recipe</h2>
-            <form id="recipe-form">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Creamy Tomato Pasta" required />
-
-                <label for="description">Description</label>
-                <input id="description" name="description" type="text"
-                    placeholder="A quick weeknight pasta with rich tomato sauce" required />
-
-                <label for="ingredients">Ingredients Needed</label>
-                <textarea id="ingredients" name="ingredients" rows="4"
-                    placeholder="Pasta, tomato puree, garlic, olive oil, cream..." required></textarea>
-
-                <label for="howToMake">How to Make</label>
-                <textarea id="howToMake" name="howToMake" rows="5"
-                    placeholder="1) Boil pasta... 2) Make sauce... 3) Combine..." required></textarea>
-
-                <button type="submit">Save Recipe</button>
-                <p id="form-message" class="message" aria-live="polite"></p>
-            </form>
-        </section>
-
+    <main class="container single-column">
         <section class="card recipes-card">
             <div class="section-head">
-                <h2>Saved Recipes</h2>
-                <button id="refresh-btn" class="secondary-btn" type="button">Refresh</button>
+                <h2>All Recipes</h2>
+                <div class="section-actions">
+                    <button id="refresh-btn" class="secondary-btn" type="button">Refresh</button>
+                </div>
             </div>
-            <div id="recipes-list" class="recipes-list"></div>
+            <div id="recipes-list" class="recipes-list recipes-grid" aria-live="polite"></div>
         </section>
     </main>
 
-    <script src="app.js"></script>
+    <script src="home.js"></script>
 </body>
 
 </html>

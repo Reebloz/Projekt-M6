@@ -83,6 +83,26 @@ app.post("/api/recipes", (req, res) => {
     );
 });
 
+app.delete("/api/recipes/:id", (req, res) => {
+    const recipeId = Number(req.params.id);
+
+    if (!Number.isInteger(recipeId) || recipeId <= 0) {
+        return res.status(400).json({ error: "Invalid recipe id." });
+    }
+
+    db.run("DELETE FROM recipes WHERE id = ?", [recipeId], function deleteCallback(err) {
+        if (err) {
+            return res.status(500).json({ error: "Could not delete recipe." });
+        }
+
+        if (this.changes === 0) {
+            return res.status(404).json({ error: "Recipe not found." });
+        }
+
+        res.status(204).send();
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Recipe site server running on http://localhost:${PORT}`);
 });

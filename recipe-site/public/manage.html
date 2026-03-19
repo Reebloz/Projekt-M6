@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Table | Manage Recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="top-nav">
+            <a class="brand" href="/">Fresh Table</a>
+        </nav>
+        <div class="hero-content">
+            <p class="eyebrow">RECIPE MANAGEMENT</p>
+            <h1>Add and Maintain Your Collection</h1>
+            <p>
+                Create new recipes and remove old ones. Your homepage will always show
+                the updated full collection.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="add-recipe" class="card form-card">
+            <h2>Add a New Recipe</h2>
+            <form id="recipe-form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Creamy Tomato Pasta" required />
+
+                <label for="description">Description</label>
+                <input id="description" name="description" type="text"
+                    placeholder="A quick weeknight pasta with rich tomato sauce" required />
+
+                <label for="ingredients">Ingredients Needed</label>
+                <textarea id="ingredients" name="ingredients" rows="4"
+                    placeholder="Pasta, tomato puree, garlic, olive oil, cream..." required></textarea>
+
+                <label for="howToMake">How to Make</label>
+                <textarea id="howToMake" name="howToMake" rows="5"
+                    placeholder="1) Boil pasta... 2) Make sauce... 3) Combine..." required></textarea>
+
+                <button type="submit">Save Recipe</button>
+                <p id="form-message" class="message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="card recipes-card">
+            <div class="section-head">
+                <h2>Saved Recipes</h2>
+                <button id="refresh-btn" class="secondary-btn" type="button">Refresh</button>
+            </div>
+            <div id="recipes-list" class="recipes-list" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
