@@ -17,10 +17,13 @@ async function loadRecipes() {
             .map(
                 (recipe) => `
                 <article class="recipe-item">
-                    <h3>#${recipe.id} - ${escapeHtml(recipe.name)}</h3>
-                    <p class="recipe-meta">${escapeHtml(recipe.description)}</p>
-                    <p><strong>Ingredients:</strong> ${escapeHtml(recipe.ingredients)}</p>
-                    <p><strong>How to make:</strong> ${escapeHtml(recipe.howToMake)}</p>
+                    <a class="recipe-link" href="recipe.html?id=${recipe.id}" aria-label="Open recipe ${escapeHtml(recipe.name)}">
+                        <h3>#${recipe.id} - ${escapeHtml(recipe.name)}</h3>
+                        <p class="recipe-meta">${escapeHtml(recipe.description)}</p>
+                        <p><strong>Ingredients:</strong> ${escapeHtml(recipe.ingredients)}</p>
+                        <p><strong>How to make:</strong> ${escapeHtml(recipe.howToMake)}</p>
+                        <span class="recipe-link-text">Open recipe</span>
+                    </a>
                 </article>
                 `
             )

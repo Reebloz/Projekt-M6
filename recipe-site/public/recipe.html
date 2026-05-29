@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Table | Recipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="top-nav">
+            <a class="brand" href="/">Fresh Table</a>
+            <a href="manage.html" class="nav-btn">Add Recipe</a>
+        </nav>
+        <div class="hero-content">
+            <p class="eyebrow">RECIPE DETAIL</p>
+            <h1 id="recipe-name">Loading recipe...</h1>
+            <p id="recipe-description"></p>
+        </div>
+    </header>
+
+    <main class="recipe-page">
+        <section class="card detail-card">
+            <div class="detail-actions">
+                <a href="/" class="secondary-btn">Back to recipes</a>
+                <a href="manage.html" class="secondary-btn action-link">Manage recipes</a>
+            </div>
+
+            <p id="recipe-meta" class="detail-meta"></p>
+
+            <div class="detail-grid">
+                <section class="detail-section">
+                    <h3>Ingredients</h3>
+                    <p id="recipe-ingredients"></p>
+                </section>
+                <section class="detail-section">
+                    <h3>How to make</h3>
+                    <div id="recipe-method"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="recipe.js"></script>
+</body>
+
+</html>

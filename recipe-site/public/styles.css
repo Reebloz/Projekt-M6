@@ -175,9 +175,23 @@ button[type="submit"] {
 .recipe-item {
     border: 1px solid var(--line);
     border-radius: 12px;
-    padding: 0.8rem;
+    padding: 0;
     background: #fff;
     animation: rise-in 300ms ease-out;
+    overflow: hidden;
+}
+
+.recipe-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 0.9rem;
+    height: 100%;
+}
+
+.recipe-link:hover,
+.recipe-link:focus-visible {
+    background: #fff7ef;
 }
 
 .recipe-item h3 {
@@ -188,6 +202,14 @@ button[type="submit"] {
     color: var(--muted);
     font-size: 0.95rem;
     margin: 0.3rem 0;
+}
+
+.recipe-link-text {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-dark);
 }
 
 .recipe-actions {
@@ -212,6 +234,54 @@ button[type="submit"] {
     margin: 0.2rem 0 0;
     color: var(--accent-dark);
     font-size: 0.95rem;
+}
+
+.recipe-page {
+    max-width: 1100px;
+    margin: -2rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.detail-card {
+    display: grid;
+    gap: 1rem;
+}
+
+.detail-meta {
+    color: var(--muted);
+    margin: 0;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1rem;
+}
+
+.detail-section {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.detail-section h3 {
+    margin-top: 0;
+}
+
+.detail-list {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.detail-list li+li {
+    margin-top: 0.45rem;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 @keyframes rise-in {
@@ -242,6 +312,10 @@ button[type="submit"] {
 
 @media (max-width: 640px) {
     .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-grid {
         grid-template-columns: 1fr;
     }
 
