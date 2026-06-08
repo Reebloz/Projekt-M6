@@ -78,6 +78,6 @@ Thomas, Sebastian
 
 - Teste API-endpoints.
 
-- Finde og dokumentere fejl.
+- Finde fejl.
 
 - Kontrollere at kravene til projektet er opfyldt.
